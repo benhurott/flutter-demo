@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/ui/pages/signup/SignUpPage.dart';
 
 class SigninPage extends StatelessWidget {
+
+  BuildContext _context;
 
   Widget _renderTitle() {
     return new Expanded(child: new Container(
@@ -49,7 +52,7 @@ class SigninPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
                   new Padding(
-                    padding: new EdgeInsets.only(top: 20.0),
+                    padding: new EdgeInsets.only(top: 30.0),
                     child: new RaisedButton(
                       textColor: Colors.white,
                       onPressed: () {
@@ -72,7 +75,7 @@ class SigninPage extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
         new Padding(
-          padding: new EdgeInsets.only(top: 20.0),
+          padding: new EdgeInsets.only(top: 30.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
@@ -93,7 +96,7 @@ class SigninPage extends StatelessWidget {
                     )
                   ),
                   onTap: () {
-                    print('Sign up touched!');
+                    this._goToSignUp();
                   },
                 )
               )
@@ -104,12 +107,21 @@ class SigninPage extends StatelessWidget {
     );
   }
 
+  _goToSignUp() {
+    Navigator.push(
+        this._context,
+        new MaterialPageRoute(builder: (context) => new SignUpPage())
+    );
+  }
+
   _dismissKeyboard(BuildContext context) {
     FocusScope.of(context).requestFocus(new FocusNode());
   }
 
   @override
   Widget build(BuildContext context) {
+
+    this._context = context;
 
     return new GestureDetector(
       onTap: () {
