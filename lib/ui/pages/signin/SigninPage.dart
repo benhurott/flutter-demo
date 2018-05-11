@@ -104,16 +104,25 @@ class SigninPage extends StatelessWidget {
     );
   }
 
+  _dismissKeyboard(BuildContext context) {
+    FocusScope.of(context).requestFocus(new FocusNode());
+  }
+
   @override
   Widget build(BuildContext context) {
 
-    return new Container(
-      color: Colors.white,
-      child: new Column(
-        children: <Widget>[
-          this._renderTitle(),
-          this._renderForm()
-        ],
+    return new GestureDetector(
+      onTap: () {
+        this._dismissKeyboard(context);
+      },
+      child: new Container(
+        color: Colors.white,
+        child: new Column(
+          children: <Widget>[
+            this._renderTitle(),
+            this._renderForm()
+          ],
+        ),
       ),
     );
   }
