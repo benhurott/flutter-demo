@@ -1,6 +1,8 @@
 # flutter_demo
 
-A new Flutter application.
+An application for learning pourpose.
+
+Challenge Target: ![IMAGE](docs/drmob2.jpg)
 
 ## Getting Started
 

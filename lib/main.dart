@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/ui/pages/signin/SigninPage.dart';
+import 'package:flutter_demo/ui/pages/home/HomePage.dart';
 
 void main() => runApp(new MainApp());
 
@@ -14,7 +15,7 @@ class MainApp extends StatelessWidget {
           buttonColor: Colors.blue
       ),
       home: new Scaffold(
-        body: new SigninPage(),
+        body: new HomePage(),
       ),
     );
   }
