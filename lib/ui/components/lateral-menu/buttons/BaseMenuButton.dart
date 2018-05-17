@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/ui/theme/ColorPalette.dart';
-
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 abstract class BaseMenuButton extends StatelessWidget {
 
-  String getIconName();
+  Icon getIcon(Color color);
   void onSelect();
 
   @override
@@ -16,7 +16,10 @@ abstract class BaseMenuButton extends StatelessWidget {
         child: new Container(
           height: 30.0,
           width: 30.0,
-          child: new Image.asset(this.getIconName()),
+          child: () {
+            var icon = this.getIcon(Colors.white);
+            return icon;
+          }()
         ),
       ),
     );
