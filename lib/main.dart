@@ -10,10 +10,10 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return new MaterialApp(
       title: 'Flutter Demo',
-      theme: new ThemeData(
-          hintColor: Colors.blue,
-          buttonColor: Colors.blue
-      ),
+//      theme: new ThemeData(
+//          hintColor: Colors.blue,
+//          buttonColor: Colors.blue
+//      ),
       home: new Scaffold(
         body: new HomePage(),
       ),

@@ -1,0 +1,4 @@
+enum MenuSection {
+  home,
+  messenger
+}
