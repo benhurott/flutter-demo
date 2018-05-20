@@ -29,7 +29,7 @@ class _HomePageState extends State<HomePage> {
         return new MessengerPage();
       default:
         return null;
-    };
+    }
   }
 
   _onMenuChanged(MenuSection section) {
